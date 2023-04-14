@@ -1,0 +1,35 @@
+% wide format beamer
+\documentclass[usenames,dvipsnames,aspectratio=1610,professionalfonts,mathserif,t]{beamer}
+
+%% remove navigation buttons
+\beamertemplatenavigationsymbolsempty
+
+% red style
+\usetheme{Madrid}
+\usecolortheme{beaver}
+
+% automatically add title slides for `\section`s
+\AtBeginSection{\frame{\sectionpage}}
+
+% common packages
+\usepackage{amsmath,amsfonts,amssymb,bm}
+\usepackage{graphicx,xcolor}
+\usepackage{booktabs,tikz}
+
+\usepackage[makeroom]{cancel}
+
+\usetikzlibrary{bayesnet}
+
+\colorlet{mygreen}{green!60!black}
+\setlength{\itemsep}{3 mm}
+
+\input{../template/shorthands.tex}
+
+\newcommand*{\courseid}{CS-E4895}
+
+\title[\courseid{} Lecture \lecturenumber: \lecturetitle]{\courseid{} Gaussian Processes\\ Lecture \lecturenumber{}: \lecturetitle}
+\institute[]{Aalto University}
+
+\newcommand*{\mysectiontoc}{\begin{frame}[noframenumbering]{\tableofcontents[currentsection, subsectionstyle=show/show/hide]}\end{frame}}
+
+\usepackage{fontawesome5}
